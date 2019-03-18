@@ -2,12 +2,20 @@
 
 $script = <<-SCRIPT
 echo ...executing bootstrap script...
+#temp - 
+cd /vagrant && mv .env.example .env
 #composer install
+cd /vagrant && composer install
 #pip install
+cd /vagrant && pip install -r requirements.txt
+#create app key
+cd /vagrant && php artisan key:generate
 #migrate database
-cd /vagrant/Queueify && php artisan migrate
+cd /vagrant && php artisan migrate
 #serve command
-cd /vagrant/Queueify && php artisan serve --host=0.0.0.0:8000 &
+cd /vagrant && php artisan serve --host=0.0.0.0:8000 &
+#start script
+cd /vagrant && python song-player.py &
 SCRIPT
 
 # === config === #
