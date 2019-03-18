@@ -14,8 +14,6 @@ cd /vagrant && php artisan key:generate
 cd /vagrant && php artisan migrate
 #serve command
 cd /vagrant && php artisan serve --host=0.0.0.0:8000 &
-#start script
-cd /vagrant && python song-player.py &
 SCRIPT
 
 # === config === #
