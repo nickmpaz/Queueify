@@ -41,11 +41,6 @@ class SpotifyServiceProvider extends ServiceProvider
         $this->app->singleton('SpotifyWebAPI', function ($app) {
             
             $client = new \SpotifyWebAPI\SpotifyWebAPI;
-            /*
-            $session = new \SpotifyWebAPI\Session(
-                '99cbf2177bb04f76b71b7de6f87fbdc6',
-                '1c4da42567b44d51892506f5a469cac6'
-            );*/
             
             $client_id = \config('spotify.client');
             $client_secret = \config('spotify.secret');

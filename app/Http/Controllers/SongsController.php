@@ -7,18 +7,7 @@ use Illuminate\Http\Request;
 
 class SongsController extends Controller
 {
-    /*
-    public function __construct(\SpotifyWebAPI\SpotifyWebAPI $client)
-    {
-        $this->spotify = $client;
-        $session = new \SpotifyWebAPI\Session(
-            '99cbf2177bb04f76b71b7de6f87fbdc6',
-            '1c4da42567b44d51892506f5a469cac6'
-        );
-        $session->requestCredentialsToken();
-        $accessToken = $session->getAccessToken();
-        $client->setAccessToken($accessToken);
-    }*/
+    
     /**
      * Display a listing of the resource.
      *

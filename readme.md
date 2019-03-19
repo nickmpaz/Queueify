@@ -1,28 +1,57 @@
 ## Queueify
 
-(about section)
+Queueify is an application that allows other users on your local network to queue songs on 
+your Spotify player. Play music from any Spotify device, and your friends will be able to control
+what song is on next. Queueify is built with Vagrant to make hosting the application a simple process.
+Just download the code, configure, and build.
 
 ## Requirements
 
--vagrant
--premium spotify + client info
+Using Queueify requires two things:
 
-## Download
+1)  A working Vagrant installation (https://www.vagrantup.com/downloads.html)
+2)  Premium Spotify & Spotify client credentials
 
--clone Queify repository
+spotify client credentials can be obtained for free at (https://developer.spotify.com/dashboard/)
+Log in to your Spotify premium account and create an app.
+    
+## Download and Navigate to the New Directory
+
+$ git clone https://github.com/nickmpaz/Queueify.git
+$ cd ./Queueify/
 
 ## Configuration
 
-2. change .env file
+Create your .env file; An example is provided for you.
 
-## Run
+    $ mv .env.example .env
 
-3. vagrant up
+Edit the .env file with any text editor. Fill in:
 
-4. vagrant ssh
+    SPOTIFY_USERNAME=your_username_here
+    SPOTIFY_CLIENT=your_client_id_here               
+    SPOTIFY_SECRET=your_client_secret_here
 
-5. run song-player.py
+The CLIENT and SECRET values can be found at (https://developer.spotify.com/dashboard/)
+*You must create the app specified in the "Requirements section"
 
-## Access the site
+## Build the VM, and Run the Application
 
-localhost:8080
+$ vagrant up       
+$ vagrant ssh
+$ cd /vagrant/ && python song-player.py
+
+Note: the first command will take some time (especially the first time).
+
+When you run the third command, you will be prompted to log in to your spotify account.
+This will only happen the first time. It will look like:
+
+example message here
+
+Just navigate to the URL you are given with any web browser. Log in, and you will be 
+redirected to another URL. Paste that URL in the terminal and press enter.
+
+## Usage
+
+-messages
+-accessing the site
