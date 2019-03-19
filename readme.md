@@ -20,8 +20,8 @@ Log in to your Spotify premium account and create an app. When prompted for a "R
     
 ## Download and Navigate to the New Directory
 
-    $ git clone https://github.com/nickmpaz/Queueify.git
-    $ cd Queueify
+    $ git clone https://github.com/nickmpaz/queueify.git
+    $ cd queueify
 
 ## Configuration
 
