@@ -21,7 +21,7 @@ with open('.env') as f:
         if clientkey in line:
             client_id = line.replace('SPOTIFY_CLIENT=','').strip()
         if secretkey in line:
-            client_secret = line.replace('SPOTIFY_CLIENT','').strip()
+            client_secret = line.replace('SPOTIFY_SECRET=','').strip()
 
 
 connection_config_dict = {
