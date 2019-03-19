@@ -9,16 +9,16 @@ Just download the code, configure, and build.
 
 Using Queueify requires two things:
 
-1)  A working Vagrant installation (https://www.vagrantup.com/downloads.html)
-2)  Premium Spotify & Spotify client credentials
+    1)  A working Vagrant installation (https://www.vagrantup.com/downloads.html)
+    2)  Premium Spotify & Spotify client credentials
 
-spotify client credentials can be obtained for free at (https://developer.spotify.com/dashboard/)
+Spotify client credentials can be obtained for free at (https://developer.spotify.com/dashboard/)
 Log in to your Spotify premium account and create an app.
     
 ## Download and Navigate to the New Directory
 
-$ git clone https://github.com/nickmpaz/Queueify.git
-$ cd ./Queueify/
+    $ git clone https://github.com/nickmpaz/Queueify.git
+    $ cd Queueify
 
 ## Configuration
 
@@ -37,21 +37,44 @@ The CLIENT and SECRET values can be found at (https://developer.spotify.com/dash
 
 ## Build the VM, and Run the Application
 
-$ vagrant up       
-$ vagrant ssh
-$ cd /vagrant/ && python song-player.py
+    $ vagrant up       
+    $ vagrant ssh
+    $ cd /vagrant && python song-player.py
 
 Note: the first command will take some time (especially the first time).
 
 When you run the third command, you will be prompted to log in to your spotify account.
 This will only happen the first time. It will look like:
 
-example message here
+    User authentication requires interaction with your
+    web browser. Once you enter your credentials and
+    give authorization, you will be redirected to
+    a url.  Paste that url you were directed to to
+    complete the authorization.
 
 Just navigate to the URL you are given with any web browser. Log in, and you will be 
 redirected to another URL. Paste that URL in the terminal and press enter.
 
 ## Usage
 
--messages
--accessing the site
+After starting the script you will likely see messages like
+
+    there is no active device.
+    spotify is not currently playing anything.
+
+Just start playing some music from any Spotify app. You will then see
+
+    there are no songs in the queue.
+
+This means you're ready add some songs with Queueify! On your host machine you can access web app at
+
+    localhost:8080
+
+Others on your local network 
+
+    your_host_machine_ip:8080
+
+
+
+    
+
