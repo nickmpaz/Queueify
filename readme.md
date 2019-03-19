@@ -13,7 +13,9 @@ Using Queueify requires two things:
     2)  Premium Spotify & Spotify client credentials
 
 Spotify client credentials can be obtained for free at (https://developer.spotify.com/dashboard/)
-Log in to your Spotify premium account and create an app.
+Log in to your Spotify premium account and create an app. When prompted for a "Redirect URI", enter
+    
+    http://localhost/
     
 ## Download and Navigate to the New Directory
 
@@ -26,14 +28,15 @@ Create your .env file; An example is provided for you.
 
     $ mv .env.example .env
 
-Edit the .env file with any text editor. Fill in:
+Edit the .env file with any text editor. Fill in these fields:
 
     SPOTIFY_USERNAME=your_username_here
     SPOTIFY_CLIENT=your_client_id_here               
     SPOTIFY_SECRET=your_client_secret_here
 
 The CLIENT and SECRET values can be found at (https://developer.spotify.com/dashboard/)
-*You must create the app specified in the "Requirements section"
+
+*You must create the app specified in the "Requirements" section.
 
 ## Build the VM, and Run the Application
 
