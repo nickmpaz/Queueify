@@ -13,6 +13,7 @@ Using Queueify requires two things:
     2)  Premium Spotify & Spotify client credentials
 
 Spotify client credentials can be obtained for free at (https://developer.spotify.com/dashboard/)
+
 Log in to your Spotify premium account and create an app. When prompted for a "Redirect URI", enter
     
     http://localhost/
