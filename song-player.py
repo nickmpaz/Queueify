@@ -6,6 +6,24 @@ from mysql.connector import Error
 from mysql.connector import errorcode
 import time
 
+userkey = "SPOTIFY_USERNAME"
+clientkey = "SPOTIFY_CLIENT"
+secretkey = "SPOTIFY_SECRET"
+username = ""
+client_id = ""
+client_secret = ""
+
+#get info from .env file
+with open('.env') as f:
+    for line in f:
+        if userkey in line:
+            username = line.replace('SPOTIFY_USERNAME=','').strip()
+        if clientkey in line:
+            client_id = line.replace('SPOTIFY_CLIENT=','').strip()
+        if secretkey in line:
+            client_secret = line.replace('SPOTIFY_CLIENT','').strip()
+
+
 connection_config_dict = {
     'user': 'homestead',
     'password': 'secret',
@@ -16,8 +34,8 @@ connection_config_dict = {
     'autocommit': True,
     'pool_size': 5
 }
+
 scope = 'user-library-read user-read-playback-state user-modify-playback-state'
-username = "nicholasmpaz"
 
 try:
     #connect to mysql database
@@ -31,8 +49,8 @@ try:
     token = util.prompt_for_user_token(
         username,
         scope,
-        client_id='99cbf2177bb04f76b71b7de6f87fbdc6',
-        client_secret='1c4da42567b44d51892506f5a469cac6',
+        client_id,
+        client_secret,
         redirect_uri='http://localhost/'
     )
     sp = spotipy.Spotify(auth=token)
