@@ -1,8 +1,21 @@
 ## Queueify
 
-1. clone Queify repository
+(about section)
+
+## Requirements
+
+-vagrant
+-premium spotify + client info
+
+## Download
+
+-clone Queify repository
+
+## Configuration
 
 2. change .env file
+
+## Run
 
 3. vagrant up
 
@@ -10,4 +23,6 @@
 
 5. run song-player.py
 
-6. accessing the site
+## Access the site
+
+localhost:8080
