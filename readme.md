@@ -13,7 +13,8 @@ Using Queueify requires two things:
     1)  A working Vagrant installation (https://www.vagrantup.com/downloads.html)
     2)  Premium Spotify & Spotify client credentials
 
-Spotify client credentials can be obtained for free at (https://developer.spotify.com/dashboard/)
+Spotify client credentials can be obtained for free at(https://developer.spotify.com/dashboard/). 
+Dont worry, it'll only take a minute.
 
 Log in to your Spotify premium account and create an app. When prompted for a "Redirect URI", enter
     
@@ -26,7 +27,7 @@ Log in to your Spotify premium account and create an app. When prompted for a "R
 
 ## Configuration
 
-Create your .env file; An example is provided for you.
+Create your .env file. An example is provided for you.
 
     $ mv .env.example .env
 
@@ -36,9 +37,9 @@ Edit the .env file with any text editor. Fill in these fields:
     SPOTIFY_CLIENT=your_client_id_here               
     SPOTIFY_SECRET=your_client_secret_here
 
-The CLIENT and SECRET values can be found at (https://developer.spotify.com/dashboard/)
+The CLIENT and SECRET values can be found at (https://developer.spotify.com/dashboard/).
 
-*You must create the app specified in the "Requirements" section.
+Note: You must create the app specified in the "Requirements" section.
 
 ## Build the VM, and Run the Application
 
@@ -46,7 +47,7 @@ The CLIENT and SECRET values can be found at (https://developer.spotify.com/dash
     $ vagrant ssh
     $ cd /vagrant && python song-player.py
 
-Note: the first command will take a couple minutes.
+The first command will take a couple minutes.
 
 When you run the third command, you will be prompted to log in to your spotify account.
 This will only happen the first time. It will look like:
