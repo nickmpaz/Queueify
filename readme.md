@@ -10,10 +10,12 @@ Just download the code, configure, and build.
 
 Using Queueify requires two things:
 
-    1)  A working Vagrant installation (https://www.vagrantup.com/downloads.html)
+    1)  A working Vagrant installation 
     2)  Premium Spotify & Spotify client credentials
 
-Spotify client credentials can be obtained for free at(https://developer.spotify.com/dashboard/). 
+Vagrant can be downloaded at (https://www.vagrantup.com/downloads.html).
+
+Spotify client credentials can be obtained for free at (https://developer.spotify.com/dashboard/). 
 Dont worry, it'll only take a minute.
 
 Log in to your Spotify premium account and create an app. When prompted for a "Redirect URI", enter
