@@ -1,8 +1,9 @@
-## Queueify
+# Queueify
 
 Queueify is an application that allows other users on your local network to queue songs on 
 your Spotify player. Play music from any Spotify device, and your friends will be able to control
-what song is on next. Queueify is built with Vagrant to make hosting the application a simple process.
+what song is on next. Queueify was developed primarily with php via the Laravel framework,
+and some python. It was also built for Vagrant to make hosting the application a simple process.
 Just download the code, configure, and build.
 
 ## Requirements
@@ -45,7 +46,7 @@ The CLIENT and SECRET values can be found at (https://developer.spotify.com/dash
     $ vagrant ssh
     $ cd /vagrant && python song-player.py
 
-Note: the first command will take some time (especially the first time).
+Note: the first command will take a couple minutes.
 
 When you run the third command, you will be prompted to log in to your spotify account.
 This will only happen the first time. It will look like:
@@ -74,10 +75,15 @@ This means you're ready add some songs with Queueify! On your host machine you c
 
     localhost:8080
 
-Others on your local network 
+Others on your local network can access the app at
 
     your_host_machine_ip:8080
 
+Queue songs with Queueify's simple interace. When you are done, you can shutdown
+the virtual machine after logging out.
+
+    $ exit
+    $ vagrant destroy
 
 
     
